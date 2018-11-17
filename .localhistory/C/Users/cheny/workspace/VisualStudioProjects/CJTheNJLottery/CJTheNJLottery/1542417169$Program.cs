@@ -15,7 +15,7 @@ namespace CJTheNJLottery
 		private static int[] PickThree()
 		{
 			Random random = new Random();
-			int[] pickThree = { random.Next(0,9), random.Next(0,9), random.Next(0,9) };
+			int[] pickThree = { random.Next(10), random.Next(10), random.Next(10) };
 			return pickThree;
 		}
 
@@ -26,29 +26,24 @@ namespace CJTheNJLottery
 		private static int[] PickFour()
 		{
 			Random random = new Random();
-			int[] pickFour = { random.Next(0,9), random.Next(0,9), random.Next(0,9), random.Next(0,9) };
+			int[] pickFour = { random.Next(10), random.Next(10), random.Next(10), random.Next(10) };
 			return pickFour;
 		}
 
 		/**
-		 * Pick five(5) numbers between 1-43.
-		 * Jersey Cash 5 drawings are held every night at approximately 7:57 pm.
+		 * 
 		 */
 		private static int[] JerseyCashFive()
 		{
 			Random random = new Random();
-			int[] jerseyCashFive = { random.Next(1,43), random.Next(1,43), random.Next(1,43), random.Next(1, 43), random.Next(1, 43) };
+			int[] jerseyCashFive = { random.Next(10), random.Next(10), random.Next(10) };
 			return jerseyCashFive;
 		}
 
-		/**
-		 * Pick six(6) numbers between 1-49
-		 * Pick-6 drawings are held every Monday & Thursday at approximately 7:57 pm.
-		 */
 		private static int[] PickSix()
 		{
 			Random random = new Random();
-			int[] pickSix = { random.Next(1,49), random.Next(1,49), random.Next(1,49), random.Next(1,49), random.Next(1, 49), random.Next(1, 49) };
+			int[] pickSix = { random.Next(10), random.Next(10), random.Next(10) };
 			return pickSix;
 		}
 
@@ -69,10 +64,10 @@ namespace CJTheNJLottery
 			Console.WriteLine("Hello C.J and welcome back. Wish you success :-)\n");
 			Console.WriteLine("Please select a raffle for the foolowing:");
 			Console.WriteLine("------------------------------------------\n");
-			Console.WriteLine("1) PICK-3");
-			Console.WriteLine("2) PICK-4");
-			Console.WriteLine("3) JERSEY CASH 5");
-			Console.WriteLine("4) PICK-6");
+			Console.WriteLine("1) PICK-3 (not valid)");
+			Console.WriteLine("2) PICK-4 (not valid)");
+			Console.WriteLine("3) JERSEY CASH 5 (not valid)");
+			Console.WriteLine("4) PICK-6 (not valid)");
 			Console.WriteLine("5) POWERBALL");
 			Console.WriteLine("6) MEGA MILLIONS (not valid)");
 			int raffel = 0;
@@ -95,22 +90,13 @@ namespace CJTheNJLottery
 						}
 						break;
 					case 2:
-						foreach (int value in PickFour())
-						{
-							Console.Write("{0} ", value);
-						}
+						PickFour();
 						break;
 					case 3:
-						foreach (int value in JerseyCashFive())
-						{
-							Console.Write("{0} ", value);
-						}
+						JerseyCashFive();
 						break;
 					case 4:
-						foreach (int value in PickSix())
-						{
-							Console.Write("{0} ", value);
-						}
+						PickSix();
 						break;
 					case 5:
 						foreach (int value in PowerBall().Item1)

@@ -37,7 +37,7 @@ namespace CJTheNJLottery
 		private static int[] JerseyCashFive()
 		{
 			Random random = new Random();
-			int[] jerseyCashFive = { random.Next(1,43), random.Next(1,43), random.Next(1,43), random.Next(1, 43), random.Next(1, 43) };
+			int[] jerseyCashFive = { random.Next(1,43), random.Next(1,43), random.Next(1,43) };
 			return jerseyCashFive;
 		}
 
@@ -95,22 +95,13 @@ namespace CJTheNJLottery
 						}
 						break;
 					case 2:
-						foreach (int value in PickFour())
-						{
-							Console.Write("{0} ", value);
-						}
+						PickFour();
 						break;
 					case 3:
-						foreach (int value in JerseyCashFive())
-						{
-							Console.Write("{0} ", value);
-						}
+						JerseyCashFive();
 						break;
 					case 4:
-						foreach (int value in PickSix())
-						{
-							Console.Write("{0} ", value);
-						}
+						PickSix();
 						break;
 					case 5:
 						foreach (int value in PowerBall().Item1)

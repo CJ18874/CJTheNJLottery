@@ -37,7 +37,7 @@ namespace CJTheNJLottery
 		private static int[] JerseyCashFive()
 		{
 			Random random = new Random();
-			int[] jerseyCashFive = { random.Next(1,43), random.Next(1,43), random.Next(1,43), random.Next(1, 43), random.Next(1, 43) };
+			int[] jerseyCashFive = { random.Next(1,43), random.Next(1,43), random.Next(1,43) };
 			return jerseyCashFive;
 		}
 
